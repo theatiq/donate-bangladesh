@@ -1,7 +1,7 @@
 function getAmount(id) {
     return document.getElementById(id)
 }
-
+// Noakhali
 document.getElementById("donate-noakhali").addEventListener("click", function () {
     const donationNoakhali = parseFloat(getAmount("donate-amount-noakhali").value)
     const myPrevBalance = parseFloat(getAmount("my-prev-balance").innerText)
@@ -16,6 +16,14 @@ document.getElementById("donate-noakhali").addEventListener("click", function ()
         document.getElementById("donate-amount-noakhali").value = ""
         return
     }
+    if (donationNoakhali > myPrevBalance) {
+        alert("You do not have sufficient amount to donate.")
+        document.getElementById("sorry").innerText = "You do not have sufficient amount to donate.!"
+        document.getElementById("humankind").innerText = ""
+        document.getElementById("unsuccessful").innerText = ""
+        document.getElementById("donate-amount-noakhali").value = ""
+        return
+    }
     document.getElementById("my-prev-balance").innerText = myAfterBalance.toFixed(2)
     document.getElementById("noakhali-prev-balance").innerText = noakhaliAfterBalance.toFixed(2)
     document.getElementById("donate-amount-noakhali").value = ""
@@ -23,6 +31,8 @@ document.getElementById("donate-noakhali").addEventListener("click", function ()
     document.getElementById("humankind").innerText = "You have donated for humankind"
     document.getElementById("unsuccessful").innerText = "Successfully"
 })
+
+// Feni
 
 document.getElementById("donate-feni").addEventListener("click", function () {
     const donationFeni = parseFloat(getAmount("donate-amount-feni").value)
@@ -38,6 +48,15 @@ document.getElementById("donate-feni").addEventListener("click", function () {
         document.getElementById("donate-amount-feni").value = ""
         return
     }
+    if (donationFeni > myPrevBalance) {
+        alert("You do not have sufficient amount to donate.")
+        document.getElementById("sorry2").innerText = "You do not have sufficient amount to donate.!"
+        document.getElementById("humankind2").innerText = ""
+        document.getElementById("unsuccessful2").innerText = ""
+        document.getElementById("donate-amount-feni").value = ""
+        return
+    }
+
     document.getElementById("my-prev-balance").innerText = myAfterBalance.toFixed(2)
     document.getElementById("feni-prev-balance").innerText = feniAfterBalance.toFixed(2)
     document.getElementById("donate-amount-feni").value = ""
@@ -46,6 +65,7 @@ document.getElementById("donate-feni").addEventListener("click", function () {
     document.getElementById("unsuccessful2").innerText = "Successfully"
 })
 
+// Quota
 document.getElementById("donate-quota").addEventListener("click", function () {
     const donationQuota = parseFloat(getAmount("donate-amount-quota").value)
     const myPrevBalance = parseFloat(getAmount("my-prev-balance").innerText)
@@ -55,6 +75,14 @@ document.getElementById("donate-quota").addEventListener("click", function () {
     if (isNaN(donationQuota) || donationQuota < 0) {
         alert("Please enter only positive number!")
         document.getElementById("sorry3").innerText = "Please enter only positive number!"
+        document.getElementById("humankind3").innerText = ""
+        document.getElementById("unsuccessful3").innerText = ""
+        document.getElementById("donate-amount-quota").value = ""
+        return
+    }
+    if (donationQuota > myPrevBalance) {
+        alert("You do not have sufficient amount to donate.")
+        document.getElementById("sorry3").innerText = "You do not have sufficient amount to donate.!"
         document.getElementById("humankind3").innerText = ""
         document.getElementById("unsuccessful3").innerText = ""
         document.getElementById("donate-amount-quota").value = ""
