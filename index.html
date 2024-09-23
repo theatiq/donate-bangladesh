@@ -12,7 +12,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1 class="text-5xl text-center">Donate Bangladesh</h1>
+    <header class="mb-20">
+      <div class="navbar bg-base-200 px-12 py-12">
+        <div class="navbar-start">
+          <!-- <button class="btn btn-primary">Primary</button> -->
+          <a class="btn btn-primary text-xl">Blog</a>
+        </div>
+        <div class="navbar-center space-x-5">
+          <img src="./assets/logo.png" />
+          <h1 class="text-5xl">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end space-x-5">
+          <img src="./assets/coin.png" />
+          <div class="stat-value">89400</div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-5 mt-20">
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Donate</button>
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+          History
+        </button>
+      </div>
+    </header>
+    <main class="w-10/12 mx-auto">
+      <!-- Main Section -->
+      <!-- all Cards starts-->
+      <div>
+        <!-- Card-01 start-->
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure>
+            <img src="./assets/noakhali.png" alt="Flood" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-5">
+              <img src="./assets/coin.png" />
+              <div class="stat-value">89400</div>
+            </div>
+            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <!-- Todo change text -->
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In, hic?
+            </p>
+            <input type="text" placeholder="Write your donation amount" />
+            <div class="bg-green-600 text-center rounded-lg">
+              Donate Now
+            </div>
+          </div>
+        </div>
+        <!-- Card-01 end-->
+      </div>
+      <!-- all Cards ends-->
+    </main>
+    <footer>
+      <!-- Footer Section -->
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
