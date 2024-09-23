@@ -1,22 +1,3 @@
-// document.getElementById("donate-noakhali").addEventListener("click", function () {
-//     const donationNoakhali = parseFloat(document.getElementById("donate-amount-noakhali").value)
-//     console.log(typeof donationNoakhali);
-//     console.log(donationNoakhali);
-// })
-
-// document.getElementById("donate-feni").addEventListener("click", function () {
-//     const donationFeni = parseFloat(document.getElementById("donate-amount-feni").value)
-//     console.log(typeof donationFeni);
-//     console.log(donationFeni);
-// })
-
-// document.getElementById("donate-quota").addEventListener("click", function () {
-//     const donationQuota = parseFloat(document.getElementById("donate-amount-quota").value)
-//     console.log(typeof donationQuota);
-//     console.log(donationQuota);
-// })
-
-
 function getAmount(id) {
     return document.getElementById(id)
 }
@@ -27,6 +8,13 @@ document.getElementById("donate-noakhali").addEventListener("click", function ()
     const noakhaliPrevBalance = parseFloat(getAmount("noakhali-prev-balance").innerText)
     const myAfterBalance = myPrevBalance - donationNoakhali
     const noakhaliAfterBalance = noakhaliPrevBalance + donationNoakhali
+    if (isNaN(donationNoakhali) || donationNoakhali < 0) {
+        alert("Please enter only positive number!")
+        document.getElementById("sorry").innerText = "Please enter only positive number!"
+        document.getElementById("humankind").innerText = ""
+        document.getElementById("unsuccessful").innerText = ""
+        return
+    }
     document.getElementById("my-prev-balance").innerText = myAfterBalance.toFixed(2)
     document.getElementById("noakhali-prev-balance").innerText = noakhaliAfterBalance.toFixed(2)
     document.getElementById("donate-amount-noakhali").value = ""
