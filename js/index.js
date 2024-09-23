@@ -121,5 +121,15 @@ document.getElementById("donate-quota").addEventListener("click", function () {
 
 
 // Transaction History
+// document.getElementById("show-history").addEventListener("click" function(){
+//     const historyShow= getAmount("history-list")
+
+// })
+
+document.getElementById("show-history").addEventListener("click", function(){
+    document.getElementById("history-list").classList.remove("hidden")
+    document.getElementById("show-history").classList.add("bg-purple-600")
+    document.getElementById("show-donate").classList.remove("bg-purple-600")
+})
 
 
