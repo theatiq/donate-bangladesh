@@ -7,10 +7,11 @@ function addHistory(donation, place) {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     const today = new Date()
     const dayName = days[today.getDay()]
+    const options = {year: "numeric", month: "long", day: "numeric"}
     historyItem.classList = "border border2 rounded-lg mt-6 p-5"
     historyItem.innerHTML = `
         <h1 class="text-2xl font-bold">${donation} Taka is ${place}</h1>
-        <p class="font-bold">Date: ${dayName} ${new Date().toLocaleString()}</p>
+        <p class="font-bold">Date: ${dayName} ${new Date().toLocaleDateString("en-us", options)} ${new Date().toTimeString()}</p>
     `
     const historyContainer = document.getElementById("history-list")
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
@@ -26,7 +27,7 @@ document.getElementById("donate-noakhali").addEventListener("click", function ()
     const noakhaliPrevBalance = parseFloat(getAmount("noakhali-prev-balance").innerText)
     const myAfterBalance = myPrevBalance - donationNoakhali
     const noakhaliAfterBalance = noakhaliPrevBalance + donationNoakhali
-    if (isNaN(donationNoakhali) || donationNoakhali < 0) {
+    if (isNaN(donationNoakhali) || donationNoakhali <= 0) {
         alert("Please enter only positive number!")
         document.getElementById("sorry").innerText = "Please enter only positive number!"
         document.getElementById("humankind").innerText = ""
@@ -60,7 +61,7 @@ document.getElementById("donate-feni").addEventListener("click", function () {
     const feniPrevBalance = parseFloat(getAmount("feni-prev-balance").innerText)
     const myAfterBalance = myPrevBalance - donationFeni
     const feniAfterBalance = feniPrevBalance + donationFeni
-    if (isNaN(donationFeni) || donationFeni < 0) {
+    if (isNaN(donationFeni) || donationFeni <= 0) {
         alert("Please enter only positive number!")
         document.getElementById("sorry2").innerText = "Please enter only positive number!"
         document.getElementById("humankind2").innerText = ""
@@ -94,7 +95,7 @@ document.getElementById("donate-quota").addEventListener("click", function () {
     const quotaPrevBalance = parseFloat(getAmount("quota-prev-balance").innerText)
     const myAfterBalance = myPrevBalance - donationQuota
     const quotaAfterBalance = quotaPrevBalance + donationQuota
-    if (isNaN(donationQuota) || donationQuota < 0) {
+    if (isNaN(donationQuota) || donationQuota <= 0) {
         alert("Please enter only positive number!")
         document.getElementById("sorry3").innerText = "Please enter only positive number!"
         document.getElementById("humankind3").innerText = ""
