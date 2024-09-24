@@ -128,12 +128,15 @@ document.getElementById("donate-quota").addEventListener("click", function () {
 
 document.getElementById("show-history").addEventListener("click", function () {
     document.getElementById("history-list").classList.remove("hidden")
+    document.getElementById("all-cards").classList.add("hidden")
     document.getElementById("show-history").classList.add("bg-purple-600")
     document.getElementById("show-donate").classList.remove("bg-purple-600")
+
 })
 
 document.getElementById("show-donate").addEventListener("click", function () {
     document.getElementById("history-list").classList.add("hidden")
+    document.getElementById("all-cards").classList.remove("hidden")
     document.getElementById("show-history").classList.remove("bg-purple-600")
     document.getElementById("show-donate").classList.add("bg-purple-600")
 
