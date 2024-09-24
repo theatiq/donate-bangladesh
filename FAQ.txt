@@ -28,7 +28,10 @@ We can manipulate an element's attributes and styles in bunch of different metho
 Some of those are: getAttribute(), setAttribute(), removeAttribute(), and setting value of 
 propery using elemnt.style.respective-style.
 
-
+When I input 500abcd as donation, It deducts 500 from balance and add with 
+respective fund. How can I prevent this. Can I use input field as "number".
+Other than everything is validated. Or it is really needed. video instruction
+(at 6.18 min) says only to validate string and negative number.
 
 
 

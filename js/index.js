@@ -7,7 +7,7 @@ function addHistory(donation, place) {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     const today = new Date()
     const dayName = days[today.getDay()]
-    const options = {year: "numeric", month: "long", day: "numeric"}
+    const options = { year: "numeric", month: "long", day: "numeric" }
     historyItem.classList = "border border2 rounded-lg mt-6 p-5"
     historyItem.innerHTML = `
         <h1 class="text-2xl font-bold">${donation} Taka is ${place}</h1>
@@ -16,9 +16,6 @@ function addHistory(donation, place) {
     const historyContainer = document.getElementById("history-list")
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 }
-
-
-
 // Noakhali
 document.getElementById("donate-noakhali").addEventListener("click", function () {
     const donationNoakhali = parseFloat(getAmount("donate-amount-noakhali").value)
@@ -120,19 +117,11 @@ document.getElementById("donate-quota").addEventListener("click", function () {
     addHistory(donationQuota.toFixed(2), donationPlace)
 })
 
-
-// Transaction History
-// document.getElementById("show-history").addEventListener("click" function(){
-//     const historyShow= getAmount("history-list")
-
-// })
-
 document.getElementById("show-history").addEventListener("click", function () {
     document.getElementById("history-list").classList.remove("hidden")
     document.getElementById("all-cards").classList.add("hidden")
     document.getElementById("show-history").classList.add("bg-purple-600")
     document.getElementById("show-donate").classList.remove("bg-purple-600")
-
 })
 
 document.getElementById("show-donate").addEventListener("click", function () {
@@ -140,5 +129,4 @@ document.getElementById("show-donate").addEventListener("click", function () {
     document.getElementById("all-cards").classList.remove("hidden")
     document.getElementById("show-history").classList.remove("bg-purple-600")
     document.getElementById("show-donate").classList.add("bg-purple-600")
-
 })
