@@ -12,7 +12,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <a class="btn btn-primary text-xl ml-10 mt-10" href="./index.html">Home</a>
+    <header class="mb-5 sticky top-0 z-10 bg-purple-200 opacity-90">
+      <div class="lg:flex justify-around bg-base-200 px-12 py-6">
+        <div>
+          <a class="btn btn-primary text-xl mb-5" href="./index.html">HOME</a>
+        </div>
+        <div class="flex items-center gap-5 mb-5">
+          <img src="./assets/logo.png" />
+          <h1 class="text-xl lg:text-4xl">Donate Bangladesh</h1>
+        </div>
+        <div class="flex items-center gap-5">
+          <img src="./assets/coin.png" />
+          <div id="my-prev-balance" class="stat-value text-4xl">10000</div>
+          <span class="font-bold">BDT</span>
+        </div>
+      </div>
+    </header>
     <h1 class="text-6xl text-center my-10">Important FAQ</h1>
     <div class="w-10/12 mx-auto flex flex-col gap-5">
       <div class="collapse collapse-arrow bg-base-200">
@@ -21,7 +36,15 @@
           What is the Document Object Model(DOM)?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            If we closely observe the HTML document, we will find that it is
+            structured as an object in JavaScript. This structured
+            representation is called the Document Object Model (DOM). Since it
+            is similar to a JavaScript object, we can easily create, access, and
+            manipulate HTML elements through JavaScript. The DOM allows us to
+            interact with and dynamically modify a webpage's content, structure,
+            and style.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -30,7 +53,12 @@
           How do you select element from the DOM?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            To select elements from the DOM in JavaScript, we can use various
+            methods. Some of those are: getElementById(),
+            getElementsByClassName(), getElementsByTagName(), querySelector(),
+            querySelectorAll() etc.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -40,7 +68,12 @@
           useful?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            When we want to handle higher level element we have use a technique
+            using bubble effect in DOM. This technique is called event
+            delegation in the context of DOM. It is very useful when we want to
+            dynamically add child from parent.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -50,7 +83,12 @@
           DOM?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            We can manipulate an element's attributes and styles in bunch of
+            different methods. Some of those are: getAttribute(),
+            setAttribute(), removeAttribute(), and setting value of propery
+            using elemnt.style.respective-style.
+          </p>
         </div>
       </div>
     </div>
