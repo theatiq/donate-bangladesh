@@ -10,7 +10,7 @@ function addHistory(donation, place) {
     const options = { year: "numeric", month: "long", day: "numeric" }
     historyItem.classList = "border border2 rounded-lg mt-6 p-5"
     historyItem.innerHTML = `
-        <h1 class="text-2xl font-bold">${donation} Taka is ${place}</h1>
+        <h1 class="text-2xl font-bold">${donation} Taka is donated to ${place}</h1>
         <p class="font-bold">Date: ${dayName} ${new Date().toLocaleDateString("en-us", options)} ${new Date().toTimeString()}</p>
     `
     const historyContainer = document.getElementById("history-list")
